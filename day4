@@ -1,0 +1,91 @@
+# Write a Python program to sum all the items in a list.
+
+l =[1,2,3,4,5,6]
+sum = 0;
+for i in l:
+    sum = sum + i
+print(sum)
+
+# Write a Python program to get the largest number from a list.
+
+l3 =[1, 2, 3, 4, 5, 6]
+largest =max(l3)
+print(largest)
+
+# Write a Python program to remove duplicates from a list.
+
+l = [1,2,3,4,5,6,2,3,4]
+l1 = []
+for i in l:
+    if i not in l1:
+        l1.append(i)
+print(l1)
+
+# Write a program to shift every element of a list to circularly right. E.g.- INPUT : 1 2 3
+# 4 5
+# OUTPUT : 5 1 2 3 4
+
+l = [1,2,3,4,5]
+if l:
+    last = l.pop()
+    l.insert(0,last)
+print(l)
+
+# Take a list of 10 elements. Split it into middle and store the elements in two dfferent lists.
+# E.g.-
+# INITIAL list :
+# 58 24 13 15 63 9 8 81 1 78
+# After spliting :
+# 58 24 13 15 63
+# 9 8 81 1 78
+
+l = [58, 24, 13, 15, 63, 9, 8, 81, 1, 78]
+
+middle = len(l)//2
+first = l[:middle]
+last = l[middle:]
+print(first)
+print(last)
+
+# Python Program to Find the Second Largest Number in a List
+
+l = [1,2,3,4,5,6,7]
+largest = max(l)
+
+l.remove(largest)
+print(l)
+largest2 = max(l)
+
+print(largest2)
+
+# Program to Find Even elements in a List:
+
+l =[1,2,3,4,5,6,7,8,9]
+l1=[]
+for i in l:
+    if i%2==0:
+        l1.append(i)
+print(l1)
+
+# Program to Print list having numbers less than 10
+
+l = [1,7,4,10,19,11,15]
+l1 = []
+for i in l:
+    if i < 10:
+        l1.append(i)
+print(l1)
+
+# WAP to display the frequency of each item in a list.
+
+l = [1,2,2,3,3,3,6,5,5,5,5,7]
+l1=[]
+
+for i in l:
+    count =0
+    if i not in l1:
+        for j in l:
+            if i == j:
+                count+=1
+        print(i,count)
+        l1.append(i)
